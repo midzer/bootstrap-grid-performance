@@ -7,13 +7,50 @@
     <title>Compare performance of Bootstrap 4 and 5 grid</title>
 </head>
 <body>
+    <h1>Compare performance of Bootstrap 4 and 5 grid</h1>
+    <h2>Setup</h2>
+    <ul>
+        <li>~2000 lines of HTML each</li>
+        <li>"easy" DOM: h1, a .row and 3 .col, many ul + li nodes with random data</li>
+        <li>Show results using PerformanceNavigationTiming interface "domInteractive" property</li>
+    </ul>
     <ul>
         <li>
-            <a href="4.html">Bootstrap 4 grid</a>
+            <a href="4.html">current Bootstrap 4.3.1 grid</a>
         </li>
         <li>
-            <a href="5.html">Bootstrap 5 grid</a>
+            <a href="5.html">latest Bootstrap 5 grid</a> <a href="https://github.com/twbs/bootstrap/pull/28517">(https://github.com/twbs/bootstrap/pull/28517)</a>
         </li>
     </ul>
+    <h2>Measurement results</h2>
+    <p>10 runs for each grid</p>
+    <h3>v4</h3>
+    <ul>
+        <li>51</li>
+        <li>52</li>
+        <li>52</li>
+        <li>53</li>
+        <li>54</li>
+        <li>51</li>
+        <li>52</li>
+        <li>54</li>
+        <li>51</li>
+        <li>52</li>
+    </ul>
+    <p>Median: 52.2ms</p>
+    <h3>v5</h3>
+    <ul>
+        <li>51</li>
+        <li>51</li>
+        <li>51</li>
+        <li>49</li>
+        <li>55</li>
+        <li>53</li>
+        <li>52</li>
+        <li>54</li>
+        <li>51</li>
+        <li>50</li>
+    </ul>
+    <p>Median: 51.7ms</p>
 </body>
 </html>
